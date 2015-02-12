@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38D246331A8C66C600C0D615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246321A8C66C600C0D615 /* main.m */; };
+		38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246351A8C66C600C0D615 /* AppDelegate.m */; };
+		38D246391A8C66C600C0D615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246381A8C66C600C0D615 /* ViewController.m */; };
+		38D2463C1A8C66C600C0D615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463A1A8C66C600C0D615 /* Main.storyboard */; };
+		38D2463E1A8C66C600C0D615 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463D1A8C66C600C0D615 /* Images.xcassets */; };
+		38D246411A8C66C600C0D615 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */; };
+		38D2464D1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38D246471A8C66C600C0D615 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38D246251A8C66C600C0D615 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38D2462C1A8C66C600C0D615;
+			remoteInfo = YLSwipeLockViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38D2462D1A8C66C600C0D615 /* YLSwipeLockViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLSwipeLockViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D246311A8C66C600C0D615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D246321A8C66C600C0D615 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38D246341A8C66C600C0D615 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38D246351A8C66C600C0D615 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38D246371A8C66C600C0D615 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		38D246381A8C66C600C0D615 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		38D2463B1A8C66C600C0D615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38D2463D1A8C66C600C0D615 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38D246401A8C66C600C0D615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		38D246461A8C66C600C0D615 /* YLSwipeLockViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLSwipeLockViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D2464B1A8C66C700C0D615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockViewDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38D2462A1A8C66C600C0D615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D246431A8C66C600C0D615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38D246241A8C66C600C0D615 = {
+			isa = PBXGroup;
+			children = (
+				38D2462F1A8C66C600C0D615 /* YLSwipeLockViewDemo */,
+				38D246491A8C66C600C0D615 /* YLSwipeLockViewDemoTests */,
+				38D2462E1A8C66C600C0D615 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38D2462E1A8C66C600C0D615 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38D2462D1A8C66C600C0D615 /* YLSwipeLockViewDemo.app */,
+				38D246461A8C66C600C0D615 /* YLSwipeLockViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38D2462F1A8C66C600C0D615 /* YLSwipeLockViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				38D246341A8C66C600C0D615 /* AppDelegate.h */,
+				38D246351A8C66C600C0D615 /* AppDelegate.m */,
+				38D246371A8C66C600C0D615 /* ViewController.h */,
+				38D246381A8C66C600C0D615 /* ViewController.m */,
+				38D2463A1A8C66C600C0D615 /* Main.storyboard */,
+				38D2463D1A8C66C600C0D615 /* Images.xcassets */,
+				38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */,
+				38D246301A8C66C600C0D615 /* Supporting Files */,
+			);
+			path = YLSwipeLockViewDemo;
+			sourceTree = "<group>";
+		};
+		38D246301A8C66C600C0D615 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D246311A8C66C600C0D615 /* Info.plist */,
+				38D246321A8C66C600C0D615 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38D246491A8C66C600C0D615 /* YLSwipeLockViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */,
+				38D2464A1A8C66C700C0D615 /* Supporting Files */,
+			);
+			path = YLSwipeLockViewDemoTests;
+			sourceTree = "<group>";
+		};
+		38D2464A1A8C66C700C0D615 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D2464B1A8C66C700C0D615 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38D2462C1A8C66C600C0D615 /* YLSwipeLockViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D246501A8C66C700C0D615 /* Build configuration list for PBXNativeTarget "YLSwipeLockViewDemo" */;
+			buildPhases = (
+				38D246291A8C66C600C0D615 /* Sources */,
+				38D2462A1A8C66C600C0D615 /* Frameworks */,
+				38D2462B1A8C66C600C0D615 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YLSwipeLockViewDemo;
+			productName = YLSwipeLockViewDemo;
+			productReference = 38D2462D1A8C66C600C0D615 /* YLSwipeLockViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38D246451A8C66C600C0D615 /* YLSwipeLockViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D246531A8C66C700C0D615 /* Build configuration list for PBXNativeTarget "YLSwipeLockViewDemoTests" */;
+			buildPhases = (
+				38D246421A8C66C600C0D615 /* Sources */,
+				38D246431A8C66C600C0D615 /* Frameworks */,
+				38D246441A8C66C600C0D615 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38D246481A8C66C600C0D615 /* PBXTargetDependency */,
+			);
+			name = YLSwipeLockViewDemoTests;
+			productName = YLSwipeLockViewDemoTests;
+			productReference = 38D246461A8C66C600C0D615 /* YLSwipeLockViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38D246251A8C66C600C0D615 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Yulong Xiao";
+				TargetAttributes = {
+					38D2462C1A8C66C600C0D615 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					38D246451A8C66C600C0D615 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 38D2462C1A8C66C600C0D615;
+					};
+				};
+			};
+			buildConfigurationList = 38D246281A8C66C600C0D615 /* Build configuration list for PBXProject "YLSwipeLockViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38D246241A8C66C600C0D615;
+			productRefGroup = 38D2462E1A8C66C600C0D615 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38D2462C1A8C66C600C0D615 /* YLSwipeLockViewDemo */,
+				38D246451A8C66C600C0D615 /* YLSwipeLockViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38D2462B1A8C66C600C0D615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D2463C1A8C66C600C0D615 /* Main.storyboard in Resources */,
+				38D246411A8C66C600C0D615 /* LaunchScreen.xib in Resources */,
+				38D2463E1A8C66C600C0D615 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D246441A8C66C600C0D615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38D246291A8C66C600C0D615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D246391A8C66C600C0D615 /* ViewController.m in Sources */,
+				38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */,
+				38D246331A8C66C600C0D615 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D246421A8C66C600C0D615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D2464D1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38D246481A8C66C600C0D615 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38D2462C1A8C66C600C0D615 /* YLSwipeLockViewDemo */;
+			targetProxy = 38D246471A8C66C600C0D615 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38D2463A1A8C66C600C0D615 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D2463B1A8C66C600C0D615 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D246401A8C66C600C0D615 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38D2464E1A8C66C700C0D615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38D2464F1A8C66C700C0D615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38D246511A8C66C700C0D615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YLSwipeLockViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38D246521A8C66C700C0D615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YLSwipeLockViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38D246541A8C66C700C0D615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YLSwipeLockViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YLSwipeLockViewDemo.app/YLSwipeLockViewDemo";
+			};
+			name = Debug;
+		};
+		38D246551A8C66C700C0D615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YLSwipeLockViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YLSwipeLockViewDemo.app/YLSwipeLockViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38D246281A8C66C600C0D615 /* Build configuration list for PBXProject "YLSwipeLockViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D2464E1A8C66C700C0D615 /* Debug */,
+				38D2464F1A8C66C700C0D615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D246501A8C66C700C0D615 /* Build configuration list for PBXNativeTarget "YLSwipeLockViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D246511A8C66C700C0D615 /* Debug */,
+				38D246521A8C66C700C0D615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38D246531A8C66C700C0D615 /* Build configuration list for PBXNativeTarget "YLSwipeLockViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D246541A8C66C700C0D615 /* Debug */,
+				38D246551A8C66C700C0D615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38D246251A8C66C600C0D615 /* Project object */;
+}
