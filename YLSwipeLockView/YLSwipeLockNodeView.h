@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef NS_ENUM(NSUInteger, YLSwipeLockNodeViewStatus) {
+    YLSwipeLockNodeViewStatusNormal,
+    YLSwipeLockNodeViewStatusSelected,
+    YLSwipeLockNodeViewStatusWorming
+};
 
 @interface YLSwipeLockNodeView : UIView
+@property (nonatomic) YLSwipeLockNodeViewStatus nodeViewStatus;
 
 @end

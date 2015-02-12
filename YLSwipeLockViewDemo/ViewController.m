@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YLSwipeLockView.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
     label.text = @"hello world";
     [self.view addSubview:label];
+    YLSwipeLockView *lockView = [[YLSwipeLockView alloc] initWithFrame:CGRectMake(20, 40, 280, 280)];
+    [self.view addSubview:lockView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

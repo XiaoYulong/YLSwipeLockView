@@ -8,7 +8,62 @@
 
 #import "YLSwipeLockNodeView.h"
 
+@interface YLSwipeLockNodeView()
+@property (nonatomic, strong)CAShapeLayer *outlineLayer;
+@end
+
+
 @implementation YLSwipeLockNodeView
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self.layer addSublayer:self.outlineLayer];
+        self.nodeViewStatus = YLSwipeLockNodeViewStatusNormal;
+    }
+    return self;
+}
+
+-(void)setNodeViewStatus:(YLSwipeLockNodeViewStatus)nodeViewStatus
+{
+    _nodeViewStatus = nodeViewStatus;
+    switch (_nodeViewStatus) {
+        case YLSwipeLockNodeViewStatusNormal:
+            self.outlineLayer.strokeColor = [UIColor blueColor].CGColor;
+            break;
+        case YLSwipeLockNodeViewStatusSelected:
+            ;
+            break;
+        case YLSwipeLockNodeViewStatusWorming:
+            ;
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)layoutSubviews
+{
+    self.outlineLayer.frame = self.bounds;
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
+    self.outlineLayer.path = circlePath.CGPath;
+
+}
+
+-(CAShapeLayer *)outlineLayer
+{
+    if (_outlineLayer == nil) {
+        _outlineLayer = [[CAShapeLayer alloc] init];
+        _outlineLayer.frame = self.bounds;
+        _outlineLayer.strokeColor = [UIColor blueColor].CGColor;
+        _outlineLayer.lineWidth = 0.5f;
+        _outlineLayer.fillColor  = [UIColor clearColor].CGColor;
+        
+        UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
+        _outlineLayer.path = circlePath.CGPath;
+    }
+    return _outlineLayer;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
