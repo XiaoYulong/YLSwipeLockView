@@ -10,10 +10,10 @@
 		38D246331A8C66C600C0D615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246321A8C66C600C0D615 /* main.m */; };
 		38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246351A8C66C600C0D615 /* AppDelegate.m */; };
 		38D246391A8C66C600C0D615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246381A8C66C600C0D615 /* ViewController.m */; };
-		38D2463C1A8C66C600C0D615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463A1A8C66C600C0D615 /* Main.storyboard */; };
 		38D2463E1A8C66C600C0D615 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463D1A8C66C600C0D615 /* Images.xcassets */; };
 		38D246411A8C66C600C0D615 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */; };
 		38D2464D1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */; };
+		38D246591A8C683600C0D615 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246581A8C683600C0D615 /* YLSwipeLockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		38D246351A8C66C600C0D615 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38D246371A8C66C600C0D615 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		38D246381A8C66C600C0D615 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		38D2463B1A8C66C600C0D615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38D2463D1A8C66C600C0D615 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38D246401A8C66C600C0D615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		38D246461A8C66C600C0D615 /* YLSwipeLockViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLSwipeLockViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2464B1A8C66C700C0D615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockViewDemoTests.m; sourceTree = "<group>"; };
+		38D246571A8C683600C0D615 /* YLSwipeLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSwipeLockView.h; sourceTree = "<group>"; };
+		38D246581A8C683600C0D615 /* YLSwipeLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		38D246241A8C66C600C0D615 = {
 			isa = PBXGroup;
 			children = (
+				38D246561A8C674800C0D615 /* YLSwipeLockView */,
 				38D2462F1A8C66C600C0D615 /* YLSwipeLockViewDemo */,
 				38D246491A8C66C600C0D615 /* YLSwipeLockViewDemoTests */,
 				38D2462E1A8C66C600C0D615 /* Products */,
@@ -85,7 +87,6 @@
 				38D246351A8C66C600C0D615 /* AppDelegate.m */,
 				38D246371A8C66C600C0D615 /* ViewController.h */,
 				38D246381A8C66C600C0D615 /* ViewController.m */,
-				38D2463A1A8C66C600C0D615 /* Main.storyboard */,
 				38D2463D1A8C66C600C0D615 /* Images.xcassets */,
 				38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */,
 				38D246301A8C66C600C0D615 /* Supporting Files */,
@@ -117,6 +118,15 @@
 				38D2464B1A8C66C700C0D615 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38D246561A8C674800C0D615 /* YLSwipeLockView */ = {
+			isa = PBXGroup;
+			children = (
+				38D246571A8C683600C0D615 /* YLSwipeLockView.h */,
+				38D246581A8C683600C0D615 /* YLSwipeLockView.m */,
+			);
+			name = YLSwipeLockView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +209,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D2463C1A8C66C600C0D615 /* Main.storyboard in Resources */,
 				38D246411A8C66C600C0D615 /* LaunchScreen.xib in Resources */,
 				38D2463E1A8C66C600C0D615 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D246391A8C66C600C0D615 /* ViewController.m in Sources */,
+				38D246591A8C683600C0D615 /* YLSwipeLockView.m in Sources */,
 				38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */,
 				38D246331A8C66C600C0D615 /* main.m in Sources */,
 			);
@@ -244,14 +254,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		38D2463A1A8C66C600C0D615 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38D2463B1A8C66C600C0D615 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLSwipeLockViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLSwipeLockViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
