@@ -10,7 +10,7 @@
 typedef NS_ENUM(NSUInteger, YLSwipeLockNodeViewStatus) {
     YLSwipeLockNodeViewStatusNormal,
     YLSwipeLockNodeViewStatusSelected,
-    YLSwipeLockNodeViewStatusWorming
+    YLSwipeLockNodeViewStatusWarning
 };
 
 @interface YLSwipeLockNodeView : UIView

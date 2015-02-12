@@ -10,6 +10,7 @@
 
 @interface YLSwipeLockNodeView()
 @property (nonatomic, strong)CAShapeLayer *outlineLayer;
+@property (nonatomic, strong)CAShapeLayer *innerCircleLayer;
 @end
 
 
@@ -19,9 +20,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self.layer addSublayer:self.outlineLayer];
+        [self.layer addSublayer:self.innerCircleLayer];
         self.nodeViewStatus = YLSwipeLockNodeViewStatusNormal;
-        UIPanGestureRecognizer *panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-//        [self addGestureRecognizer:panRec];
     }
     return self;
 }
@@ -39,27 +39,50 @@
     _nodeViewStatus = nodeViewStatus;
     switch (_nodeViewStatus) {
         case YLSwipeLockNodeViewStatusNormal:
-            self.outlineLayer.strokeColor = [UIColor blueColor].CGColor;
+            [self setStatusToNormal];
             break;
         case YLSwipeLockNodeViewStatusSelected:
-            self.outlineLayer.strokeColor = [UIColor redColor].CGColor;
+            [self setStatusToSelected];
             break;
-        case YLSwipeLockNodeViewStatusWorming:
-            ;
+        case YLSwipeLockNodeViewStatusWarning:
+            [self setStatusToWarning];
             break;
         default:
             break;
     }
 }
 
+-(void)setStatusToNormal
+{
+    self.outlineLayer.strokeColor = [UIColor blueColor].CGColor;
+    self.innerCircleLayer.fillColor = [UIColor clearColor].CGColor;
+}
+
+-(void)setStatusToSelected
+{
+    self.outlineLayer.strokeColor = [UIColor blueColor].CGColor;
+    self.innerCircleLayer.fillColor = [UIColor blueColor].CGColor;
+}
+
+-(void)setStatusToWarning
+{
+    self.outlineLayer.strokeColor = [UIColor redColor].CGColor;
+    self.innerCircleLayer.fillColor = [UIColor redColor].CGColor;
+    
+}
+
+
 -(void)layoutSubviews
 {
     self.outlineLayer.frame = self.bounds;
-    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
-    self.outlineLayer.path = circlePath.CGPath;
-    UILabel *label  = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 40, 20)];
-    label.text = [@(self.tag) stringValue];
-    [self addSubview:label];
+    UIBezierPath *outlinePath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
+    self.outlineLayer.path = outlinePath.CGPath;
+    
+    CGRect frame = self.bounds;
+    CGFloat width = frame.size.width / 3;
+    self.innerCircleLayer.frame = CGRectMake(width, width, width, width);
+    UIBezierPath *innerPath = [UIBezierPath bezierPathWithOvalInRect:self.innerCircleLayer.bounds];
+    self.innerCircleLayer.path = innerPath.CGPath;
 
 }
 
@@ -72,6 +95,17 @@
         _outlineLayer.fillColor  = [UIColor clearColor].CGColor;
     }
     return _outlineLayer;
+}
+
+-(CAShapeLayer *)innerCircleLayer
+{
+    if (_innerCircleLayer == nil) {
+        _innerCircleLayer = [[CAShapeLayer alloc] init];
+        _innerCircleLayer.strokeColor = [UIColor clearColor].CGColor;
+        _innerCircleLayer.lineWidth = 1.0f;
+        _innerCircleLayer.fillColor  = [UIColor blueColor].CGColor;
+    }
+    return _innerCircleLayer;
 }
 
 /*

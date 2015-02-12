@@ -38,6 +38,9 @@
         YLSwipeLockNodeView *node = self.nodeArray[index];
         node.nodeViewStatus = YLSwipeLockNodeViewStatusSelected;
     }
+    if (rec.state == UIGestureRecognizerStateEnded) {
+        [self cleanNodes];
+    }
 }
 
 -(void)layoutSubviews{
@@ -66,6 +69,14 @@
         }
     }
     return -1;
+}
+
+-(void)cleanNodes
+{
+    for (int i = 0; i < self.nodeArray.count; ++i) {
+        YLSwipeLockNodeView *node = self.nodeArray[i];
+        node.nodeViewStatus = YLSwipeLockNodeViewStatusNormal;
+    }
 }
 
 /*
