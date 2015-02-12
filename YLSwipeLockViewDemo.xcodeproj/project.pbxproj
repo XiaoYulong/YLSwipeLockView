@@ -13,7 +13,7 @@
 		38D2463E1A8C66C600C0D615 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463D1A8C66C600C0D615 /* Images.xcassets */; };
 		38D246411A8C66C600C0D615 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */; };
 		38D2464D1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */; };
-		38D246591A8C683600C0D615 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246581A8C683600C0D615 /* YLSwipeLockView.m */; };
+		38D2465D1A8C6CE900C0D615 /* YLSwipeLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2465C1A8C6CE900C0D615 /* YLSwipeLockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		38D246461A8C66C600C0D615 /* YLSwipeLockViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLSwipeLockViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2464B1A8C66C700C0D615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D2464C1A8C66C700C0D615 /* YLSwipeLockViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockViewDemoTests.m; sourceTree = "<group>"; };
-		38D246571A8C683600C0D615 /* YLSwipeLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSwipeLockView.h; sourceTree = "<group>"; };
-		38D246581A8C683600C0D615 /* YLSwipeLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSwipeLockView.m; sourceTree = "<group>"; };
+		38D2465B1A8C6CE900C0D615 /* YLSwipeLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YLSwipeLockView.h; path = YLSwipeLockView/YLSwipeLockView.h; sourceTree = "<group>"; };
+		38D2465C1A8C6CE900C0D615 /* YLSwipeLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YLSwipeLockView.m; path = YLSwipeLockView/YLSwipeLockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		38D246241A8C66C600C0D615 = {
 			isa = PBXGroup;
 			children = (
-				38D246561A8C674800C0D615 /* YLSwipeLockView */,
+				38D2465A1A8C6C1300C0D615 /* YLSwipeLockView */,
 				38D2462F1A8C66C600C0D615 /* YLSwipeLockViewDemo */,
 				38D246491A8C66C600C0D615 /* YLSwipeLockViewDemoTests */,
 				38D2462E1A8C66C600C0D615 /* Products */,
@@ -120,11 +120,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		38D246561A8C674800C0D615 /* YLSwipeLockView */ = {
+		38D2465A1A8C6C1300C0D615 /* YLSwipeLockView */ = {
 			isa = PBXGroup;
 			children = (
-				38D246571A8C683600C0D615 /* YLSwipeLockView.h */,
-				38D246581A8C683600C0D615 /* YLSwipeLockView.m */,
+				38D2465B1A8C6CE900C0D615 /* YLSwipeLockView.h */,
+				38D2465C1A8C6CE900C0D615 /* YLSwipeLockView.m */,
 			);
 			name = YLSwipeLockView;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D246391A8C66C600C0D615 /* ViewController.m in Sources */,
-				38D246591A8C683600C0D615 /* YLSwipeLockView.m in Sources */,
+				38D2465D1A8C6CE900C0D615 /* YLSwipeLockView.m in Sources */,
 				38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */,
 				38D246331A8C66C600C0D615 /* main.m in Sources */,
 			);
