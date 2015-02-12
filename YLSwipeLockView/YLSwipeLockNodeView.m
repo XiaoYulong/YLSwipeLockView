@@ -54,13 +54,9 @@
 {
     if (_outlineLayer == nil) {
         _outlineLayer = [[CAShapeLayer alloc] init];
-        _outlineLayer.frame = self.bounds;
         _outlineLayer.strokeColor = [UIColor blueColor].CGColor;
         _outlineLayer.lineWidth = 0.5f;
         _outlineLayer.fillColor  = [UIColor clearColor].CGColor;
-        
-        UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
-        _outlineLayer.path = circlePath.CGPath;
     }
     return _outlineLayer;
 }
