@@ -54,27 +54,13 @@
     if (index >= 0) {
         YLSwipeLockNodeView *node = self.nodeArray[index];
         
-        if ([self addSelectedNode:node]) {
-            
-        }
-    }else{
-        
-        if (self.pointArray.count > 0) {
-            if (self.pointArray.count > self.selectedNodeArray.count) {
-                [self.pointArray removeLastObject];
-            }
-            [self.pointArray addObject:[NSValue valueWithCGPoint:touchPoint]];
-            [self.polygonalLinePath removeAllPoints];
-            CGPoint startPoint = [self.pointArray[0] CGPointValue];
-            [self.polygonalLinePath moveToPoint:startPoint];
-            
-            for (int i = 1; i < self.pointArray.count; ++i) {
-                CGPoint middlePoint = [self.pointArray[i] CGPointValue];
-                [self.polygonalLinePath addLineToPoint:middlePoint];
-            }
-            self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+        if (![self addSelectedNode:node]) {
+            [self moveLineWithFinggrPosition:touchPoint];
 
         }
+    }else{
+        [self moveLineWithFinggrPosition:touchPoint];
+        
     }
     
     if (rec.state == UIGestureRecognizerStateEnded) {
@@ -91,30 +77,64 @@
         nodeView.nodeViewStatus = YLSwipeLockNodeViewStatusSelected;
         [self.selectedNodeArray addObject:nodeView];
         
-        if(self.selectedNodeArray.count == 1){
-            
-            //path move to start point
-            CGPoint startPoint = nodeView.center;
-            [self.polygonalLinePath moveToPoint:startPoint];
-            [self.pointArray addObject:[NSValue valueWithCGPoint:startPoint]];
-            self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
-            
-        }else{
-            
-            //path add line to point
-            [self.pointArray removeLastObject];
-            CGPoint middlePoint = nodeView.center;
-            [self.pointArray addObject:[NSValue valueWithCGPoint:middlePoint]];
-            [self.polygonalLinePath addLineToPoint:middlePoint];
-            self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
-        }
-
+        [self addLineToNode:nodeView];
         
         return YES;
     }else{
         return NO;
     }
     
+}
+
+-(void)addLineToNode:(YLSwipeLockNodeView *)nodeView
+{
+    if(self.selectedNodeArray.count == 1){
+        
+        //path move to start point
+        CGPoint startPoint = nodeView.center;
+        [self.polygonalLinePath moveToPoint:startPoint];
+        [self.pointArray addObject:[NSValue valueWithCGPoint:startPoint]];
+        self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+        
+    }else{
+        
+        //path add line to point
+        [self.pointArray removeLastObject];
+        CGPoint middlePoint = nodeView.center;
+        [self.pointArray addObject:[NSValue valueWithCGPoint:middlePoint]];
+        
+        [self.polygonalLinePath removeAllPoints];
+        CGPoint startPoint = [self.pointArray[0] CGPointValue];
+        [self.polygonalLinePath moveToPoint:startPoint];
+        
+        for (int i = 1; i < self.pointArray.count; ++i) {
+            CGPoint middlePoint = [self.pointArray[i] CGPointValue];
+            [self.polygonalLinePath addLineToPoint:middlePoint];
+        }
+        self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+        
+    }
+
+}
+
+-(void)moveLineWithFinggrPosition:(CGPoint)touchPoint
+{
+    if (self.pointArray.count > 0) {
+        if (self.pointArray.count > self.selectedNodeArray.count) {
+            [self.pointArray removeLastObject];
+        }
+        [self.pointArray addObject:[NSValue valueWithCGPoint:touchPoint]];
+        [self.polygonalLinePath removeAllPoints];
+        CGPoint startPoint = [self.pointArray[0] CGPointValue];
+        [self.polygonalLinePath moveToPoint:startPoint];
+        
+        for (int i = 1; i < self.pointArray.count; ++i) {
+            CGPoint middlePoint = [self.pointArray[i] CGPointValue];
+            [self.polygonalLinePath addLineToPoint:middlePoint];
+        }
+        self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+        
+    }
 }
 
 -(void)layoutSubviews{
