@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		386590381A8CFFAD00FC4C50 /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386590371A8CFFAD00FC4C50 /* MaskViewController.m */; };
 		38D246331A8C66C600C0D615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246321A8C66C600C0D615 /* main.m */; };
 		38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246351A8C66C600C0D615 /* AppDelegate.m */; };
 		38D246391A8C66C600C0D615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246381A8C66C600C0D615 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		386590361A8CFFAD00FC4C50 /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
+		386590371A8CFFAD00FC4C50 /* MaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
 		38D2462D1A8C66C600C0D615 /* YLSwipeLockViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLSwipeLockViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D246311A8C66C600C0D615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D246321A8C66C600C0D615 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				38D246351A8C66C600C0D615 /* AppDelegate.m */,
 				38D246371A8C66C600C0D615 /* ViewController.h */,
 				38D246381A8C66C600C0D615 /* ViewController.m */,
+				386590361A8CFFAD00FC4C50 /* MaskViewController.h */,
+				386590371A8CFFAD00FC4C50 /* MaskViewController.m */,
 				38D2463D1A8C66C600C0D615 /* Images.xcassets */,
 				38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */,
 				38D246301A8C66C600C0D615 /* Supporting Files */,
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386590381A8CFFAD00FC4C50 /* MaskViewController.m in Sources */,
 				38D246391A8C66C600C0D615 /* ViewController.m in Sources */,
 				38D2465D1A8C6CE900C0D615 /* YLSwipeLockView.m in Sources */,
 				38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */,
@@ -424,6 +430,7 @@
 				38D246521A8C66C700C0D615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38D246531A8C66C700C0D615 /* Build configuration list for PBXNativeTarget "YLSwipeLockViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +439,7 @@
 				38D246551A8C66C700C0D615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
