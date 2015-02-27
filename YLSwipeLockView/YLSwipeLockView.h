@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define LIGHTBLUE [UIColor colorWithRed:0 green:170/255.0 blue:1 alpha:1]
+
 typedef NS_ENUM(NSUInteger, YLSwipeLockViewState) {
     YLSwipeLockViewStateNormal,
     YLSwipeLockViewStateWarning

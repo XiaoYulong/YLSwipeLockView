@@ -220,7 +220,7 @@
     [self.selectedNodeArray removeAllObjects];
     [self.pointArray removeAllObjects];
     self.polygonalLinePath = [UIBezierPath new];
-    self.polygonalLineLayer.strokeColor = [UIColor blueColor].CGColor;
+    self.polygonalLineLayer.strokeColor = LIGHTBLUE.CGColor;
     self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
 }
 
@@ -244,7 +244,7 @@
     if (_polygonalLineLayer == nil) {
         _polygonalLineLayer = [[CAShapeLayer alloc] init];
         _polygonalLineLayer.lineWidth = 1.0f;
-        _polygonalLineLayer.strokeColor = [UIColor blueColor].CGColor;
+        _polygonalLineLayer.strokeColor = LIGHTBLUE.CGColor;
         _polygonalLineLayer.fillColor = [UIColor clearColor].CGColor;
     }
     return _polygonalLineLayer;
