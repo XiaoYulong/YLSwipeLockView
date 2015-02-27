@@ -55,11 +55,11 @@
         YLSwipeLockNodeView *node = self.nodeArray[index];
         
         if (![self addSelectedNode:node]) {
-            [self moveLineWithFinggrPosition:touchPoint];
+            [self moveLineWithFingerPosition:touchPoint];
 
         }
     }else{
-        [self moveLineWithFinggrPosition:touchPoint];
+        [self moveLineWithFingerPosition:touchPoint];
         
     }
     
@@ -117,7 +117,7 @@
 
 }
 
--(void)moveLineWithFinggrPosition:(CGPoint)touchPoint
+-(void)moveLineWithFingerPosition:(CGPoint)touchPoint
 {
     if (self.pointArray.count > 0) {
         if (self.pointArray.count > self.selectedNodeArray.count) {
