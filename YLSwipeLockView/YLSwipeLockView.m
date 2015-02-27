@@ -14,6 +14,8 @@
 @property (nonatomic, strong) CAShapeLayer *polygonalLineLayer;
 @property (nonatomic, strong) UIBezierPath *polygonalLinePath;
 @property (nonatomic, strong) NSMutableArray *pointArray;
+
+@property (nonatomic) YLSwipeLockViewState viewState;
 @end
 
 @implementation YLSwipeLockView
@@ -35,6 +37,8 @@
         
         UIPanGestureRecognizer *panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         [self addGestureRecognizer:panRec];
+        self.viewState = YLSwipeLockNodeViewStatusNormal;
+        [self cleanNodes];
         
     }
     return self;
@@ -42,15 +46,12 @@
 
 -(void)pan:(UIPanGestureRecognizer *)rec
 {
-    CGPoint touchPoint = [rec locationInView:self];
-    NSInteger index = [self indexForNodeAtPoint:touchPoint];
-    
     if  (rec.state == UIGestureRecognizerStateBegan){
-        [self.selectedNodeArray removeAllObjects];
-        [self.pointArray removeAllObjects];
-        self.polygonalLinePath = [UIBezierPath new];
+        self.viewState = YLSwipeLockNodeViewStatusNormal;
     }
     
+    CGPoint touchPoint = [rec locationInView:self];
+    NSInteger index = [self indexForNodeAtPoint:touchPoint];
     if (index >= 0) {
         YLSwipeLockNodeView *node = self.nodeArray[index];
         
@@ -64,9 +65,13 @@
     }
     
     if (rec.state == UIGestureRecognizerStateEnded) {
-        [self makeNodesToWarning];
-        
-//        [self cleanNodes];
+        if([self.delegate respondsToSelector:@selector(swipeView:didEndSwipeWithPassword:)]){
+            self.viewState = [self.delegate swipeView:self didEndSwipeWithPassword:@"12345"];
+            
+        }
+        else{
+            self.viewState = YLSwipeLockNodeViewStatusNormal;
+        }
     }
     
 }
@@ -185,6 +190,18 @@
         YLSwipeLockNodeView *node = self.nodeArray[i];
         node.nodeViewStatus = YLSwipeLockNodeViewStatusNormal;
     }
+    
+    [self.selectedNodeArray removeAllObjects];
+    [self.pointArray removeAllObjects];
+    self.polygonalLinePath = [UIBezierPath new];
+    self.polygonalLineLayer.strokeColor = [UIColor blueColor].CGColor;
+    self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+}
+
+-(void)cleanNodesIfNeeded{
+    if(self.viewState != YLSwipeLockNodeViewStatusNormal){
+        [self cleanNodes];
+    }
 }
 
 -(void)makeNodesToWarning
@@ -193,6 +210,7 @@
         YLSwipeLockNodeView *node = self.selectedNodeArray[i];
         node.nodeViewStatus = YLSwipeLockNodeViewStatusWarning;
     }
+    self.polygonalLineLayer.strokeColor = [UIColor redColor].CGColor;
 }
 
 -(CAShapeLayer *)polygonalLineLayer
@@ -204,6 +222,24 @@
         _polygonalLineLayer.fillColor = [UIColor clearColor].CGColor;
     }
     return _polygonalLineLayer;
+}
+
+-(void)setViewState:(YLSwipeLockViewState)viewState
+{
+    if(_viewState != viewState){
+        _viewState = viewState;
+        switch (_viewState){
+            case YLSwipeLockViewStateNormal:
+                [self cleanNodes];
+                break;
+            case YLSwipeLockViewStateWarning:
+                [self makeNodesToWarning];
+                [self performSelector:@selector(cleanNodesIfNeeded) withObject:nil afterDelay:1];
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 /*

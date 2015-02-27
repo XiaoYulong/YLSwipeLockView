@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "YLSwipeLockView.h"
 
-@interface ViewController ()
+@interface ViewController ()<YLSwipeLockViewDelegate>
 
 @end
 
@@ -22,12 +22,19 @@
     label.text = @"hello world";
     [self.view addSubview:label];
     YLSwipeLockView *lockView = [[YLSwipeLockView alloc] initWithFrame:CGRectMake(20, 40, self.view.bounds.size.width - 40, self.view.bounds.size.width - 40)];
+    lockView.delegate = self;
     [self.view addSubview:lockView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(YLSwipeLockViewState)swipeView:(YLSwipeLockView *)swipeView didEndSwipeWithPassword:(NSString *)password
+{
+    NSLog(@"代理给的密码：%@", password);
+    return YLSwipeLockViewStateWarning;
 }
 
 @end
