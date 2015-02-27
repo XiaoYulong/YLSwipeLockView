@@ -1,2 +1,2 @@
 # YLSwipeLockView
-a swipe to unlock an application like android.
+a swipe password view to unlock an application written in objective-c.
