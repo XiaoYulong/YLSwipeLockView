@@ -65,6 +65,8 @@
     }
     
     if (rec.state == UIGestureRecognizerStateEnded) {
+        
+        [self removeLastFingerPosition];
         if([self.delegate respondsToSelector:@selector(swipeView:didEndSwipeWithPassword:)]){
             self.viewState = [self.delegate swipeView:self didEndSwipeWithPassword:@"12345"];
             
@@ -129,6 +131,25 @@
             [self.pointArray removeLastObject];
         }
         [self.pointArray addObject:[NSValue valueWithCGPoint:touchPoint]];
+        [self.polygonalLinePath removeAllPoints];
+        CGPoint startPoint = [self.pointArray[0] CGPointValue];
+        [self.polygonalLinePath moveToPoint:startPoint];
+        
+        for (int i = 1; i < self.pointArray.count; ++i) {
+            CGPoint middlePoint = [self.pointArray[i] CGPointValue];
+            [self.polygonalLinePath addLineToPoint:middlePoint];
+        }
+        self.polygonalLineLayer.path = self.polygonalLinePath.CGPath;
+        
+    }
+}
+
+-(void)removeLastFingerPosition
+{
+    if (self.pointArray.count > 0) {
+        if (self.pointArray.count > self.selectedNodeArray.count) {
+            [self.pointArray removeLastObject];
+        }
         [self.polygonalLinePath removeAllPoints];
         CGPoint startPoint = [self.pointArray[0] CGPointValue];
         [self.polygonalLinePath moveToPoint:startPoint];
