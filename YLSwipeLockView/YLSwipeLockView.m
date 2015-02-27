@@ -68,7 +68,12 @@
         
         [self removeLastFingerPosition];
         if([self.delegate respondsToSelector:@selector(swipeView:didEndSwipeWithPassword:)]){
-            self.viewState = [self.delegate swipeView:self didEndSwipeWithPassword:@"12345"];
+            NSMutableString *password = [NSMutableString new];
+            for(YLSwipeLockNodeView *nodeView in self.selectedNodeArray){
+                NSString *index = [@(nodeView.tag) stringValue];
+                [password appendString:index];
+            }
+            self.viewState = [self.delegate swipeView:self didEndSwipeWithPassword:password];
             
         }
         else{
