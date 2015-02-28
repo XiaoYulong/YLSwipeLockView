@@ -252,7 +252,7 @@
 
 -(void)setViewState:(YLSwipeLockViewState)viewState
 {
-    if(_viewState != viewState){
+//    if(_viewState != viewState){
         _viewState = viewState;
         switch (_viewState){
             case YLSwipeLockViewStateNormal:
@@ -265,7 +265,7 @@
             default:
                 break;
         }
-    }
+//    }
 }
 
 /*

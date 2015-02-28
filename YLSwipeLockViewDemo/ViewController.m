@@ -8,33 +8,57 @@
 
 #import "ViewController.h"
 #import "YLSwipeLockView.h"
+#import "YLInitSwipePasswordController.h"
 
-@interface ViewController ()<YLSwipeLockViewDelegate>
-
+@interface ViewController ()
+@property (nonatomic, weak) UIButton *setButton;
+@property (nonatomic, weak) UIButton *checkButton;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:35/255.0 green:39/255.0 blue:54/255.0 alpha:1];
+    
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
     label.text = @"hello world";
-    [self.view addSubview:label];
-    YLSwipeLockView *lockView = [[YLSwipeLockView alloc] initWithFrame:CGRectMake(20, 40, self.view.bounds.size.width - 40, self.view.bounds.size.width - 40)];
-    lockView.delegate = self;
-    [self.view addSubview:lockView];
+    CGFloat margin = 20.0f;
+    CGFloat width = self.view.bounds.size.width - margin * 2;
+    [[UIButton appearance] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 60, width, 20)];
+    [setButton setTitle:@"set gesture password" forState:UIControlStateNormal];
+    [setButton addTarget:self action:@selector(setButtonBeTouched) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:setButton];
+    
+    UIButton *checkButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, width, 20)];
+    [checkButton setTitle:@"check gesture password" forState:UIControlStateNormal];
+    [checkButton addTarget:self action:@selector(checkButtonBeTouched) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:checkButton];
+    
+    
+}
+
+-(void)setButtonBeTouched
+{
+    YLInitSwipePasswordController *controller = [YLInitSwipePasswordController new];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+-(void)checkButtonBeTouched
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"gesturePassword"]) {
+        ;
+    }else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"no gesture password set" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(YLSwipeLockViewState)swipeView:(YLSwipeLockView *)swipeView didEndSwipeWithPassword:(NSString *)password
-{
-    NSLog(@"代理给的密码：%@", password);
-    return YLSwipeLockViewStateWarning;
 }
 
 @end
