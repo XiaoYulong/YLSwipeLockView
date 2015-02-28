@@ -11,6 +11,8 @@
 @interface YLCheckToUnlockViewController ()<YLSwipeLockViewDelegate>
 @property (nonatomic, weak) YLSwipeLockView *lockView;
 @property (nonatomic, weak) UILabel *titleLabel;
+@property (nonatomic) NSUInteger unmatchCounter;
+@property (nonatomic, weak) UILabel *counterLabel;
 @end
 
 @implementation YLCheckToUnlockViewController
@@ -28,6 +30,15 @@
     [self.view addSubview:titleLabel];
     self.titleLabel = titleLabel;
     
+    UILabel *counterLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 160, self.view.bounds.size.width - 20, 20)];
+    counterLabel.textColor = [UIColor redColor];
+    counterLabel.textAlignment = NSTextAlignmentCenter;
+    counterLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:counterLabel];
+    self.counterLabel = counterLabel;
+    self.counterLabel.hidden = YES;
+    
+    
     CGFloat viewWidth = self.view.bounds.size.width - 40;
     CGFloat viewHeight = viewWidth;
     
@@ -36,6 +47,8 @@
     
     self.lockView = lockView;
     self.lockView.delegate = self;
+    
+    self.unmatchCounter = 5;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +62,17 @@
         [self dismiss];
         return YLSwipeLockViewStateNormal;
     }else{
+        self.unmatchCounter--;
+        if (self.unmatchCounter == 0) {
+            self.counterLabel.text = @"5 times unmatched";
+            self.counterLabel.hidden = NO;
+            
+            [self performSelector:@selector(dismiss) withObject:nil afterDelay:1];
+            
+        }else {
+            self.counterLabel.text = [NSString stringWithFormat:@"unmatched, %lu times left", (unsigned long)self.unmatchCounter];
+            self.counterLabel.hidden = NO;
+        }
         return YLSwipeLockViewStateWarning;
     }
 }
