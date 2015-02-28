@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "MaskViewController.h"
 @interface AppDelegate ()
 
 @end
