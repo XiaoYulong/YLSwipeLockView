@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		386590381A8CFFAD00FC4C50 /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386590371A8CFFAD00FC4C50 /* MaskViewController.m */; };
 		3869523D1AA06E1E009CD553 /* YLInitSwipePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869523C1AA06E1E009CD553 /* YLInitSwipePasswordController.m */; };
 		38D246331A8C66C600C0D615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246321A8C66C600C0D615 /* main.m */; };
 		38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D246351A8C66C600C0D615 /* AppDelegate.m */; };
@@ -30,8 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		386590361A8CFFAD00FC4C50 /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
-		386590371A8CFFAD00FC4C50 /* MaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
 		3869523B1AA06E1E009CD553 /* YLInitSwipePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLInitSwipePasswordController.h; sourceTree = "<group>"; };
 		3869523C1AA06E1E009CD553 /* YLInitSwipePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLInitSwipePasswordController.m; sourceTree = "<group>"; };
 		38D2462D1A8C66C600C0D615 /* YLSwipeLockViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLSwipeLockViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,8 +95,6 @@
 				38D246351A8C66C600C0D615 /* AppDelegate.m */,
 				38D246371A8C66C600C0D615 /* ViewController.h */,
 				38D246381A8C66C600C0D615 /* ViewController.m */,
-				386590361A8CFFAD00FC4C50 /* MaskViewController.h */,
-				386590371A8CFFAD00FC4C50 /* MaskViewController.m */,
 				38D2463D1A8C66C600C0D615 /* Images.xcassets */,
 				38D2463F1A8C66C600C0D615 /* LaunchScreen.xib */,
 				38D246301A8C66C600C0D615 /* Supporting Files */,
@@ -243,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386590381A8CFFAD00FC4C50 /* MaskViewController.m in Sources */,
 				38D246391A8C66C600C0D615 /* ViewController.m in Sources */,
 				38D2465D1A8C6CE900C0D615 /* YLSwipeLockView.m in Sources */,
 				38D246361A8C66C600C0D615 /* AppDelegate.m in Sources */,
