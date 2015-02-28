@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "YLSwipeLockView.h"
 #import "YLInitSwipePasswordController.h"
+#import "YLCheckToUnlockViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) UIButton *setButton;
@@ -49,7 +50,8 @@
 -(void)checkButtonBeTouched
 {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"gesturePassword"]) {
-        ;
+        YLCheckToUnlockViewController *controller = [YLCheckToUnlockViewController new];
+        [self presentViewController:controller animated:YES completion:nil];
     }else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"no gesture password set" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
         [alert show];
