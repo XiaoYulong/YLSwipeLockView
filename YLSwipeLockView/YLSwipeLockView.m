@@ -77,7 +77,7 @@
             
         }
         else{
-            self.viewState = YLSwipeLockNodeViewStatusNormal;
+            self.viewState = YLSwipeLockViewStateSelected;
         }
     }
     
@@ -262,6 +262,7 @@
                 [self makeNodesToWarning];
                 [self performSelector:@selector(cleanNodesIfNeeded) withObject:nil afterDelay:1];
                 break;
+            case YLSwipeLockViewStateSelected:
             default:
                 break;
         }

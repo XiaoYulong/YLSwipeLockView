@@ -11,7 +11,8 @@
 
 typedef NS_ENUM(NSUInteger, YLSwipeLockViewState) {
     YLSwipeLockViewStateNormal,
-    YLSwipeLockViewStateWarning
+    YLSwipeLockViewStateWarning,
+    YLSwipeLockViewStateSelected
 };
 @protocol YLSwipeLockViewDelegate;
 

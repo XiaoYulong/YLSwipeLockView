@@ -13,6 +13,7 @@
 @property (nonatomic, weak) YLSwipeLockView *lockView;
 @property (nonatomic, weak) UILabel *titleLabel;
 @property (nonatomic, strong) NSString *passwordString;
+@property (nonatomic, weak) UIButton *resetButton;
 @end
 
 @implementation YLInitSwipePasswordController
@@ -25,7 +26,7 @@
     titleLabel.text = @"set your gesture password";
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.frame = CGRectMake(10, 60, self.view.bounds.size.width - 20, 20);
+    titleLabel.frame = CGRectMake(40, 60, self.view.bounds.size.width - 80, 20);
     titleLabel.font = [UIFont boldSystemFontOfSize:16];
     [self.view addSubview:titleLabel];
     self.titleLabel = titleLabel;
@@ -39,6 +40,13 @@
     self.lockView = lockView;
     self.lockView.delegate = self;
     
+    UIButton *resetButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 60, 60, 40, 20)];
+    [resetButton setTitle:@"reset" forState:UIControlStateNormal];
+    [resetButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [resetButton addTarget:self action:@selector(reset) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:resetButton];
+    self.resetButton = resetButton;
+    self.resetButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,9 +67,10 @@
         [userDefault setObject:password forKey:@"gesturePassword"];
         
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:1];
-        return YLSwipeLockViewStateNormal;
+        return YLSwipeLockViewStateSelected;
     }else{
         self.titleLabel.text = @"different from last time";
+        self.resetButton.hidden = NO;
         return YLSwipeLockViewStateWarning;
     }
     
@@ -76,6 +85,13 @@
     if (self.presentingViewController) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+-(void)reset
+{
+    self.passwordString = nil;
+    self.titleLabel.text = @"set your gesture password";
+    self.resetButton.hidden = YES;
 }
 
 @end

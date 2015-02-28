@@ -46,7 +46,7 @@
 {
     NSString *savedPassword = [[NSUserDefaults standardUserDefaults] objectForKey:@"gesturePassword"];
     if ([savedPassword isEqualToString:password]) {
-        [self performSelector:@selector(dismiss) withObject:nil afterDelay:1];
+        [self dismiss];
         return YLSwipeLockViewStateNormal;
     }else{
         return YLSwipeLockViewStateWarning;

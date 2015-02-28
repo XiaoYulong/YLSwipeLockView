@@ -26,8 +26,7 @@
     label.text = @"hello world";
     CGFloat margin = 20.0f;
     CGFloat width = self.view.bounds.size.width - margin * 2;
-    [[UIButton appearance] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    
+        
     UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 60, width, 20)];
     [setButton setTitle:@"set gesture password" forState:UIControlStateNormal];
     [setButton addTarget:self action:@selector(setButtonBeTouched) forControlEvents:UIControlEventTouchUpInside];
