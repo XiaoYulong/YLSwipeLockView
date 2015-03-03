@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, YLSwipeLockViewState) {
 @protocol YLSwipeLockViewDelegate;
 
 @interface YLSwipeLockView : UIView
-@property (nonatomic, strong) id<YLSwipeLockViewDelegate> delegate;
+@property (nonatomic, weak) id<YLSwipeLockViewDelegate> delegate;
 @end
 
 
