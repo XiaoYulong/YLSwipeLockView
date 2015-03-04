@@ -17,16 +17,17 @@ YLSwipeLockView works on iOS 6.0 and later version and is compatible with ARC pr
 
 ```objective-c
 		
-	YLSwipeLockView *lockView = [[YLSwipeLockView alloc] initWithFrame:CGRectMake(20, self.view.bounds.size.height - viewHeight - 40 - 100, viewWidth, viewHeight)];
-    [self.view addSubview:lockView];
+YLSwipeLockView *lockView = [[YLSwipeLockView alloc] initWithFrame:CGRectMake(20, self.view.bounds.size.height - viewHeight - 40 - 100, viewWidth, viewHeight)];
+[self.view addSubview:lockView];
+self.lockView = lockView;
+self.lockView.delegate = self;
     
-    self.lockView = lockView;
-    self.lockView.delegate = self;
-    
-    -(YLSwipeLockViewState)swipeView:(YLSwipeLockView *)swipeView didEndSwipeWithPassword:(NSString *)password
+-(YLSwipeLockViewState)swipeView:(YLSwipeLockView *)swipeView didEndSwipeWithPassword:(NSString *)password
 {
     //everytime user finish a swipe, this method get called and pass a password, add your logic here.
     
 }
-
 ```
+## License
+
+This code is distributed under the terms and conditions of the [MIT license](LICENSE).
