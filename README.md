@@ -1,5 +1,6 @@
 # YLSwipeLockView
-a swipe password view to unlock an application written in objective-c.
+a swipe password view to unlock an application written in objective-c
+
 <img src="example.gif"/>
 ## Requirements
 
@@ -13,7 +14,7 @@ YLSwipeLockView works on iOS 6.0 and later version and is compatible with ARC pr
 ## Usage
 
  1. Copy the YLSwipeLockView folder to your project.
- 2. Add YLSwipeLockView as a subview wherever you want add set a delegate to this YLSwipeLockView.
+ 2. Add YLSwipeLockView as a subview wherever you want and set a delegate to this YLSwipeLockView.
 
 ```objective-c
 		
